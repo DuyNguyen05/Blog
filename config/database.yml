@@ -10,7 +10,7 @@ default: &default
   reconnect: false
   username: root
   password: 1
-  # socket: /tmp/mysql.sock
+  
 development:
   <<: *default
   database: blog
