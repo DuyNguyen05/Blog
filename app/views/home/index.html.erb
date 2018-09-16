@@ -1,0 +1,16 @@
+<div class="jumbotron" , style="text-align: center;"
+</style>
+  <h1 class="display-4">Hello, world!</h1>
+</div>
+
+<div class="row">
+	<% @posts.each do |posts| %>
+	<div class="col-md-4">
+		<h1 > <%= posts.title %> </h1>
+		<p> <%= truncate(posts.content, length: 200) %> </p>
+    	<%= link_to "Read more", post_path(posts)%>
+	</div>
+	<%end%>	
+</div>
+
+	
