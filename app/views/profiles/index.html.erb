@@ -1,0 +1,9 @@
+ <h1>This is my Profile!!!</h1>
+ <div class="container" >
+  <% @profiles.each do |profiles| %>
+      <h1>Name: <%= profiles.name %></h1>
+      <h1>Birthday: <%= profiles.birthday %></h1>
+      <h1>University: <%= profiles.university%></h1>
+      <h1>Skills: <%= profiles.skills%></h1>
+   <% end %>
+ </div>
