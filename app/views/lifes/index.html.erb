@@ -1,10 +1,25 @@
-<h1>VLO</h1>
-  
-<div class="row">
-  <% @stories.each do |stories| %>
-    <div class="col-md-4">
-      <h1><%= stories.title %></h1>
-      <p><%= stories.content %></p>
-    </div>
+<!-- div class="card text-center">
+	 <% @stories.each do |stories| %>
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= stories.title %></h5>
+    <p class="card-text"><%= stories.content %></p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>   
   <% end %>
+</div> -->
+<div class="row">
+<% @stories.each do |stories| %>
+ 	<div class="col-sm-6">
+    	<div class="card">
+      		<div class="card-body">
+        		<h5 class="card-title"><%= stories.title %></h5>
+        		<p class="card-text"> <%= truncate(stories.content, length: 200) %></p>
+            <%= link_to "Read more", stories%>
+      		</div>
+    	</div>
+   </div>
+<% end %>
 </div>
